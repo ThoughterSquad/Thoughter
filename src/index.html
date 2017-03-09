@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="Author" content="Christine Ash, Brian Fiala, Nadia Mughel">
+    <meta name="description" content="text/html">
+    <meta name="Author" content="Christine Ash, Brian Fiala, Nadia Mughal">
     <title>Thoughter</title>
 
     <!-- Bootstrap CSS -->
@@ -17,20 +17,40 @@
   <body>
 
     <header>
-      <i href="glyphicon glyphicon-send"></i>
-      <h1>Thoughter</h1>
+      <h1><i class="glyphicon glyphicon-send" aria-hidden="true"></i> Thoughter</h1>
     </header>
 
-    <nav>
+    <nav class="navbar navbar-default">
+      <section class="container">
+        <ul class="nav navbar-nav">
+          <li><a href="recentthoughts.html" alt="recent thoughts page">Recent Thoughts</a></li>
+          <li><a href="new-thoughts.html" alt="new thoughts page">New Thought</a></li>
+          <li><a href="#logout" alt="logout">Logout</a></li>
+        </ul>
+      </section>
     </nav>
 
     <form>
+      <h2>Login</h2>
+      <section class="input-group">
+        <span class="input-group-addon">@</span>
+        <input type="text" name="username" class="form-control" id="username" aria-describedby="inputGroupSuccess2Status" placeholder="username">
+      </section>
+      <input type="password" class="form-control" id="password" placeholder="password">
+      <button type="submit" class="btn btn-success" id="login">Log In</button>
     </form>
 
     <form>
+      <h2>Create Account</h2>
+      <section class="input-group">
+        <span class="input-group-addon">@</span>
+        <input type="text" name="username" class="form-control" id="username" aria-describedby="inputGroupSuccess2Status" placeholder="username">
+      </section>
+      <input type="password" class="form-control" id="password" placeholder="password">
+      <button type="submit" class="btn btn-primary" id="create-account">Create Account</button>
     </form>
   </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"</script>
-  <script src="jquery-practice.js"></script>
+  <script src=",skjaxfhldisutghlrsKGJDHlasukdzj.js"></script>
 </html>
