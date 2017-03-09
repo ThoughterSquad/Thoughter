@@ -17,22 +17,37 @@
   <body>
 
     <header>
-      <i src="glyphicon glyphicon-send" aria-hidden="true"></i>
-      <h1>Thoughter</h1>
+      <h1><i class="glyphicon glyphicon-send" aria-hidden="true"></i> Thoughter</h1>
     </header>
 
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default">
       <section class="container">
-        <a href="#recentthoughts.html" alt="recent thoughts page"></a>
-        <a href="#newthoughts.html" alt="new thoughts page"></a>
-
+        <ul class="nav navbar-nav">
+          <li><a href="recentthoughts.html" alt="recent thoughts page">Recent Thoughts</a></li>
+          <li><a href="new-thoughts.html" alt="new thoughts page">New Thought</a></li>
+          <li><a href="#logout" alt="logout">Logout</a></li>
+        </ul>
       </section>
     </nav>
 
     <form>
+      <h2>Login</h2>
+      <section class="input-group">
+        <span class="input-group-addon">@</span>
+        <input type="text" name="username" class="form-control" id="username" aria-describedby="inputGroupSuccess2Status" placeholder="username">
+      </section>
+      <input type="password" class="form-control" id="password" placeholder="password">
+      <button type="submit" class="btn btn-success" id="login">Log In</button>
     </form>
 
     <form>
+      <h2>Create Account</h2>
+      <section class="input-group">
+        <span class="input-group-addon">@</span>
+        <input type="text" name="username" class="form-control" id="username" aria-describedby="inputGroupSuccess2Status" placeholder="username">
+      </section>
+      <input type="password" class="form-control" id="password" placeholder="password">
+      <button type="submit" class="btn btn-primary" id="create-account">Create Account</button>
     </form>
   </body>
 
