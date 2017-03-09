@@ -1,5 +1,11 @@
+.glyphicon-send {
+  margin-right: 1em; }
+
 .navbar section {
   margin: 0;
   padding: 0; }
+
+.btn-primary, .btn-success {
+  margin-top: 1em; }
 
 /*# sourceMappingURL=style.css.map */
