@@ -11,29 +11,33 @@
     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
-
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
 
     <header>
-
-      <h1><i class="glyphicon glyphicon-send"></i> Thoughter</h1>
+      <h1><i class="glyphicon glyphicon-send" aria-hidden="true"></i>Thoughter</h1>
     </header>
 
-    <nav >
-
+    <nav class="navbar navbar-default">
+      <section class="container">
+        <ul class="nav navbar-nav">
+          <li><a href="recentthoughts.html" alt="recent thoughts page">Recent Thoughts</a></li>
+          <li><a href="new-thought.html" alt="new thoughts page">New Thought</a></li>
+        </ul>
+      </section>
     </nav>
+
     <main>
       <h2>New Thought</h2>
-    <form>
 
-      <aside>
-        <p>What are you thinking about? Share it with the world!</p>
-        <input type="text" class="form-control" placeholder="Your thought...">
+      <form class="newthought-form">
+        <label for="newthought-input">What are you thinking about? Share it with the world!</label>
+        <input type="text" id="newthought-input" class="form-control" placeholder="Your thought...">
         <button class="btn btn-primary" type="submit">Post Thought</button>
-      </aside>
+      </form>
 
-    </form>
     </main>
   </body>
 
