@@ -21,4 +21,12 @@ header h1 {
 .btn-primary, .btn-success {
   margin-top: 1em; }
 
+.recentthoughts-section {
+  width: 90%;
+  margin: auto;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
+
 /*# sourceMappingURL=style.css.map */
