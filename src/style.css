@@ -1,5 +1,8 @@
-header h1 {
-  font-family: 'Lora', serif; }
+header {
+  border-bottom: 1px solid #E6E6E6;
+  margin-bottom: 1em; }
+  header h1 {
+    font-family: 'Lora', serif; }
 
 .glyphicon-send {
   margin-right: 1em; }
@@ -21,12 +24,29 @@ header h1 {
 .btn-primary, .btn-success {
   margin-top: 1em; }
 
-.recentthoughts-section {
+.recentthoughts-main {
   width: 90%;
-  margin: auto;
+  margin: auto; }
+
+.recentthoughts-section {
+  padding: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; }
+
+.recent-thought {
+  border: 1px solid #bce8f1;
+  border-radius: 4px; }
+  .recent-thought h5 {
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 0; }
+  .recent-thought p {
+    padding: 15px; }
+
+.newthought-form {
+  width: 63%;
+  margin: auto; }
 
 /*# sourceMappingURL=style.css.map */
