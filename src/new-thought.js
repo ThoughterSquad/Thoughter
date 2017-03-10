@@ -2,22 +2,15 @@
   'use strict';
     window.thoughter = window.thoughter || {};
 
-    let promise = fetch(
-  'https://thoughter.herokuapp.com/api',
-  {
-      method: 'POST',
-      headers: {
-        Authorization: 'token ' + ''
-      },
-      body: {
-        JSON.stringify
-      }
-
-  }
-});
-
-
-
-
+    function postThought(thought) {
+      fetch('https://thoughter.herokuapp.com/api/Thoughts', {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(thought)
+        }
+      );
+    }
 
 }());
