@@ -11,46 +11,47 @@
     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
-
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css">
   </head>
-  <body>
 
+  <body>
     <header>
-      <h1><i class="glyphicon glyphicon-send" aria-hidden="true"></i> Thoughter</h1>
+      <h1><i class="glyphicon glyphicon-send" aria-hidden="true"></i>Thoughter</h1>
+      <nav class="navbar navbar-default">
+        <section class="container">
+          <ul class="nav navbar-nav">
+            <li><a href="recentthoughts.html" alt="recent thoughts page">Recent Thoughts</a></li>
+            <li><a href="new-thought.html" alt="new thoughts page">New Thought</a></li>
+            <li><a href="#" alt="logout">Logout</a></li>
+          </ul>
+        </section>
+      </nav>
     </header>
 
-    <nav class="navbar navbar-default">
-      <section class="container">
-        <ul class="nav navbar-nav">
-          <li><a href="recentthoughts.html" alt="recent thoughts page">Recent Thoughts</a></li>
-          <li><a href="new-thoughts.html" alt="new thoughts page">New Thought</a></li>
-          <li><a href="#logout" alt="logout">Logout</a></li>
-        </ul>
-      </section>
-    </nav>
+    <main class="account-form-section">
+      <form class="login-form">
+        <h2>Login</h2>
+        <section class="input-group">
+          <article class="input-group-addon">@</article>
+          <input type="text" name="login-username" class="form-control" id="login-username" aria-describedby="inputGroupSuccess2Status" placeholder="username">
+        </section>
+        <input type="password" name="login-password" class="form-control" id="login-password" placeholder="password">
+        <button type="submit" class="btn btn-success" id="login">Log In</button>
+      </form>
 
-    <form>
-      <h2>Login</h2>
-      <section class="input-group">
-        <span class="input-group-addon">@</span>
-        <input type="text" name="username" class="form-control" id="username" aria-describedby="inputGroupSuccess2Status" placeholder="username">
-      </section>
-      <input type="password" class="form-control" id="password" placeholder="password">
-      <button type="submit" class="btn btn-success" id="login">Log In</button>
-    </form>
+      <form class="login-form">
+        <h2>Create Account</h2>
+        <section class="input-group">
+          <article class="input-group-addon">@</article>
+          <input type="text" name="create-username" class="form-control" id="create-username" aria-describedby="inputGroupSuccess2Status" placeholder="username">
+        </section>
+        <input type="password" class="form-control" id="create-password" placeholder="password">
+        <button type="submit" name="create-password" class="btn btn-primary" id="create-account">Create Account</button>
+      </form>
+    </main>
 
-    <form>
-      <h2>Create Account</h2>
-      <section class="input-group">
-        <span class="input-group-addon">@</span>
-        <input type="text" name="username" class="form-control" id="username" aria-describedby="inputGroupSuccess2Status" placeholder="username">
-      </section>
-      <input type="password" class="form-control" id="password" placeholder="password">
-      <button type="submit" class="btn btn-primary" id="create-account">Create Account</button>
-    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"</script>
+    <script src=",skjaxfhldisutghlrsKGJDHlasukdzj.js"></script>
   </body>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"</script>
-  <script src=",skjaxfhldisutghlrsKGJDHlasukdzj.js"></script>
 </html>

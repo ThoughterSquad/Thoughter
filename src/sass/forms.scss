@@ -1,0 +1,16 @@
+.account-form-section {
+  width: $mainSectionWidth;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  // content is not wrapping as desired for mobile display
+}
+
+.login-form {
+  flex: 0 45%;
+}
+
+.btn-primary, .btn-success {
+  margin-top: 1em;
+}
