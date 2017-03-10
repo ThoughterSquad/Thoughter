@@ -1,9 +1,22 @@
+header h1 {
+  font-family: 'Lora', serif; }
+
 .glyphicon-send {
   margin-right: 1em; }
 
 .navbar section {
   margin: 0;
   padding: 0; }
+
+.account-form-section {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.login-form {
+  flex: 0 45%; }
 
 .btn-primary, .btn-success {
   margin-top: 1em; }
