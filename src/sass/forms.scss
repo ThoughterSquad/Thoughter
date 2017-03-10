@@ -1,9 +1,10 @@
 .account-form-section {
-  width: 90%;
+  width: $mainSectionWidth;
   margin: auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  // content is not wrapping as desired for mobile display
 }
 
 .login-form {
