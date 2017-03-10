@@ -12,37 +12,36 @@
     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css">
   </head>
 
   <body>
-    <main>
+    <header>
+      <h1><i class="glyphicon glyphicon-send" aria-hidden='true'></i>Thoughter</h1>
+    </header>
 
-      <header>
-        <h1><i class="glyphicon glyphicon-send" aria-hidden='true'></i> Thoughter</h1>
-      </header>
-
-      <ul>
-        <i href="glyphicon glyphicon-send"></i>
-        <li>Recent Thoughts</li>
-        <li>New Thought</li>
-      </ul>
-
-      <h2>Recent Thoughts</h2>
-
-
-      <section>
-      <ul>
-        <li>Posted Date and Time</li>
-        <li>New comment will be inserted here</li>
-      </ul>
+    <nav class="navbar navbar-default">
+      <section class="container">
+        <ul class="nav navbar-nav">
+          <li><a href="recentthoughts.html" alt="recent thoughts page" class="this-page-anchor">Recent Thoughts</a></li>
+          <li><a href="new-thought.html" alt="new thoughts page">New Thought</a></li>
+        </ul>
       </section>
-      <section></section>
-    </main>
+    </nav>
 
+    <main class="recentthoughts-main">
+      <h2>Recent Thoughts</h2>
+      <ul class="recentthoughts-section">
+        <!-- articles (each li) are recent thoughts -->
+        <li><article class="recent-thought">
+          <h3>Posted Date and Time</h3>
+          <p>New comment will be inserted here</p>
+        </article></li>
+      </ul>
+    </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"</script>
     <script src="jquery-practice.js"></script>
-
   </body>
 </html>
