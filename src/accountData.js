@@ -8,14 +8,14 @@
   // how do we pass username and password to the other pages after navigating away from login page?
 
   window.thoughter.authenticateUser = function authenticateUser(username, password) {
-      let promise = fetch('https://thoughter.herokuapp.com/api/Authors/login', { method: 'POST',
-                  body: { 'username': username,
-                          'password': password }
-          }).then(function responseHandler(response) {
-            console.log(response.status);
-            if (responseObj.status > 199 && responseObj.status < 300) {
+      fetch('https://thoughter.herokuapp.com/api/Authors/login', { method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ 'username': 'jordan', 'password': 'foobar' })
+          })
+          .then(function responseHandler(response) {
+            if (response.status > 199 && response.status < 300) {
               console.log(response.status);
-              responseObj.json().then(function printData(data){
+              response.json().then(function printData(data){
                 console.log('Successful login for userId: ' + data.userId);
                 console.log(data);
               });
@@ -23,11 +23,11 @@
               console.log('Error logging in user: ' + username);
             }
           });
-    };
+  };
 
-    $('#login').on('submit', function loginEventHandler(e) {
+    $('.login-form').on('submit', function loginEventHandler(e) {
+      e.preventDefault();
       console.log('Log In button clicked!');
-      
-          // window.thoughter.authenticateUser();
+      window.thoughter.authenticateUser('jordan', 'foobar');
     });
 })();
