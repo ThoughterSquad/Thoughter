@@ -22,7 +22,7 @@ header {
   justify-content: space-between;
   flex-wrap: wrap; }
 
-.login-form {
+.login-form, .create-account-form {
   flex: 0 45%; }
 
 .btn-primary, .btn-success {
