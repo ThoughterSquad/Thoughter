@@ -12,7 +12,9 @@
 
   // function used with thought creation date and author username to format a header for thought display
   window.thoughter.formatThoughtHeader = function formatThoughtHeader(date, username) {
-    return 'Posted at ' + window.thoughter.formattedDate(date) + ' by ' + username;
+    return 'Posted at ' + window.thoughter.formattedDate(date)
+    //  + ' by ' + username // include this line for epic mode
+    ;
   };
 
 }());
