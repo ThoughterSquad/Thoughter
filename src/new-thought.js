@@ -3,21 +3,26 @@
     window.thoughter = window.thoughter || {};
 
     // POSTs a new thought to the backend database
-    function postThought(thought) {
+    function postThought(newThoughtContent) {
       fetch('https://thoughter.herokuapp.com/api/Thoughts', {
           method: 'POST',
           headers: {'content-type': 'application/json'},
-          body: JSON.stringify(thought)
+          body: JSON.stringify({"content": newThoughtContent, "authorId": window.localStorage.userId})
         }
-      ).then(function verifyNewThougthPost(data) {
-
+      ).then(function verifyNewThougthPost(response) {
+        if (response.status > 199 && response.status < 300) {
+          response.json().then(function handleData(data){
+            console.log('new thought posted successfully!');
+          });
+        } else {
+          console.log('Error posting thought');
+        }
       });
     }
 
-    $('.login-form').on('submit', function loginEventHandler(e) {
+    $('.newthought-form').on('submit', function loginEventHandler(e) {
       e.preventDefault();
-      window.localStorage.setItem('username', $('#login-username').val());
-      window.thoughter.loginUser($('#login-password').val());
+      window.thoughter.postThought($('#newthought-input').val());
     });
 
 }());

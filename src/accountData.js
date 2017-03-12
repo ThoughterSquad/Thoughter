@@ -11,7 +11,7 @@
     })
     .then(function responseHandler(response) {
       if (response.status > 199 && response.status < 300) {
-        response.json().then(function printData(data){
+        response.json().then(function handleData(data){
           window.localStorage.setItem('userId', data.id);
         });
       } else {
