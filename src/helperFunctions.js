@@ -5,7 +5,7 @@
   // comverts UTC datecode into a user readable string
   window.thoughter.formattedDate = function formattedDate(date) {
     let formattedDate = '';
-    formattedDate = date.getHours() + ':' +date.getMinutes() + ' on ' + (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear().toString().substr(2, 3);
+    formattedDate = date.getHours() + ':' + date.getMinutes() + ' on ' + (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear().toString().substr(2, 3);
     console.log(formattedDate);
     return formattedDate;
   };
@@ -18,5 +18,9 @@
     //  + ' by ' + username // include this line for epic mode
     ;
   };
+
+  let myDate = new Date();
+  console.log(window.thoughter.formatThoughtHeader(myDate));
+
 
 }());
