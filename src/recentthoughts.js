@@ -14,7 +14,7 @@
           responseObj.json().then(function printData(data) {
             data.forEach(function logThought(thoughtObj) {
               let thoughtObjUl = document.querySelector('.recentthoughts-section');
-              thoughtObjUl.appendChild(window.thoughter.displayThought(thoughtObj));
+              thoughtObjUl.appendChild(window.thoughter.buildThoughtListItem(thoughtObj));
             });
           });
         }

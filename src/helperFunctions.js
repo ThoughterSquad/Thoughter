@@ -13,7 +13,7 @@
   };
 
   // creates a thought list item with header and content
-  window.thoughter.displayThought = function displayThought(thoughtObj) {
+  window.thoughter.buildThoughtListItem = function buildThoughtListItem(thoughtObj) {
     let thoughtObjLi = document.createElement('li');
     thoughtObjLi.setAttribute('class','recent-thought');
     let thoughtHeader = document.createElement('h5');
