@@ -3,7 +3,7 @@
     window.thoughter = window.thoughter || {};
 
     // POSTs a new thought to the backend database
-    function postThought(newThoughtContent) {
+    window.thoughter.postThought = function postThought(newThoughtContent) {
       fetch('https://thoughter.herokuapp.com/api/Thoughts', {
           method: 'POST',
           headers: {'content-type': 'application/json'},
@@ -18,7 +18,7 @@
           console.log('Error posting thought');
         }
       });
-    }
+    };
 
     $('.newthought-form').on('submit', function loginEventHandler(e) {
       e.preventDefault();
