@@ -16,7 +16,7 @@
               thoughtObjLi.setAttribute('class','recent-thought');
               let thoughtHeader = document.createElement('h5');
               thoughtHeader.setAttribute('class', 'alert alert-info');
-              thoughtHeader.innerText = thoughtObj.createTime;
+              thoughtHeader.innerText = window.thoughter.formatThoughtHeader(thoughtObj.createTime);
               let thoughtContent = document.createElement('p');
               thoughtContent.innerText = thoughtObj.content;
               thoughtObjLi.appendChild(thoughtHeader);
