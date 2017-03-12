@@ -19,10 +19,4 @@
     ;
   };
 
-  let myDate = new Date();
-  console.log('this is the date: ');
-  console.log(myDate);
-  console.log('this is the header version of that date: ');
-  console.log(window.thoughter.formatThoughtHeader(myDate));
-
 }());
