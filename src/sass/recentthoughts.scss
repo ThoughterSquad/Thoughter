@@ -1,0 +1,28 @@
+.recentthoughts-main {
+  width: $mainSectionWidth;
+  margin: auto;
+}
+
+.recentthoughts-section {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.recent-thought {
+  border: 1px solid #bce8f1;
+  border-radius: 4px;
+  margin-bottom: 1.5em;
+
+  h5 {
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  p {
+    padding: 15px; // pixels used to match bootstrap
+  }
+}
