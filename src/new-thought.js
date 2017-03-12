@@ -4,10 +4,11 @@
 
     // POSTs a new thought to the backend database
     window.thoughter.postThought = function postThought(newThoughtContent) {
+      let newThoughtObject = {"content": newThoughtContent, "authorId": window.localStorage.userId};
       fetch('https://thoughter.herokuapp.com/api/Thoughts', {
           method: 'POST',
           headers: {'content-type': 'application/json'},
-          body: JSON.stringify({"content": newThoughtContent, "authorId": window.localStorage.userId})
+          body: JSON.stringify(newThoughtObject)
         }
       ).then(function verifyNewThougthPost(response) {
         if (response.status > 199 && response.status < 300) {
@@ -19,6 +20,10 @@
         }
       });
     };
+
+    window.thoughter.displayNewThought = function displayNewThought(newThoughtObject) {
+      
+    }
 
     $('.newthought-form').on('submit', function loginEventHandler(e) {
       e.preventDefault();
