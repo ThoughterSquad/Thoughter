@@ -5,7 +5,9 @@
   // comverts UTC datecode into a user readable string
   window.thoughter.formattedDate = function formattedDate(date) {
     let formattedDate = '';
-    formattedDate = date.getHours() + ':' + date.getMinutes() + ' on ' + (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear().toString().substr(2, 3);
+    let minutes = date.getMinutes();
+    if (minutes.toString().length < 2) minutes = '0' + minutes;
+    formattedDate = date.getHours() + ':' + minutes + ' on ' + (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear().toString().substr(2, 3);
     console.log(formattedDate);
     return formattedDate;
   };
