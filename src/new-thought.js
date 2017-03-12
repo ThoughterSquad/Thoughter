@@ -14,6 +14,7 @@
         if (response.status > 199 && response.status < 300) {
           response.json().then(function handleData(data){
             console.log('new thought posted successfully!');
+            window.thoughter.displayNewThought(newThoughtObject);
           });
         } else {
           console.log('Error posting thought');
@@ -21,11 +22,15 @@
       });
     };
 
+    // says window.thoughter.buildThoughtListItem is not a function ???????????
     window.thoughter.displayNewThought = function displayNewThought(newThoughtObject) {
-      
-    }
+      // let newThoughtListItem = window.thoughter.buildThoughtListItem(newThoughtObject);
+      // console.log(newThoughtListItem);
+      // $('.newthought-section').append(newThoughtListItem);
+      // $('.newthought-main').css('display', 'block');
+    };
 
-    $('.newthought-form').on('submit', function loginEventHandler(e) {
+    $('.newthought-form').on('submit', function newThoughtPoster(e) {
       e.preventDefault();
       window.thoughter.postThought($('#newthought-input').val());
     });
