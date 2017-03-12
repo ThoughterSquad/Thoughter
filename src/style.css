@@ -41,7 +41,8 @@ header {
 
 .recent-thought {
   border: 1px solid #bce8f1;
-  border-radius: 4px; }
+  border-radius: 4px;
+  margin-bottom: 1.5em; }
   .recent-thought h5 {
     box-sizing: border-box;
     margin: 0;

@@ -3,7 +3,7 @@
   window.thoughter = window.thoughter || {};
 
   // logs in a user
-  // sets a localStorage.userId for authenticating events on any pages
+  // sets a localStorage.userId for authenticating events on all pages
   window.thoughter.loginUser = function loginUser(password) {
     fetch('https://thoughter.herokuapp.com/api/Authors/login', { method: 'POST',
       headers: {'Content-Type': 'application/json'},
