@@ -22,11 +22,18 @@
 
   // event handler for log-in form submission
   // sets a localStorage.username property for site-wide use
-  $('.login-form').on('submit', function loginEventHandler(e) {
+  /**
+   * This function recieves form data: username and password and then
+   * submits data to allow the user to log-in
+   * @param  {Object} e submit event object
+   * @return {void}   
+   */
+  function loginEventHandler(e) {
     e.preventDefault();
     window.localStorage.setItem('username', $('#login-username').val());
     window.thoughter.loginUser($('#login-password').val());
-  });
+  }
+  $('.login-form').on('submit', loginEventHandler );
 
   // TODO logout function must return localStorage.username and id to ""
 
