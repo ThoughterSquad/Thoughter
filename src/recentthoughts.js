@@ -13,8 +13,12 @@
         if (responseObj.status > 199 && responseObj.status < 300) {
           responseObj.json().then(function printData(data) {
             data.forEach(function logThought(thoughtObj) {
-              let thoughtObjUl = document.querySelector('.recentthoughts-section');
-              thoughtObjUl.appendChild(window.thoughter.buildThoughtListItem(thoughtObj));
+              // let thoughtObjUl = document.querySelector('.recentthoughts-section');
+              // console.log(typeof thoughtObj);
+              // console.log(thoughtObj.content);
+              let liWithRightStuffInsideOfIt = window.thoughter.buildThoughtListItem(thoughtObj);
+              // console.log(liWithRightStuffInsideOfIt);
+              $('.recentthoughts-section').append(liWithRightStuffInsideOfIt);
             });
           });
         }
