@@ -5,8 +5,8 @@
 
     /**
      * retrieveThoughts retrieves a selection of thought objects from the
-     * backend DB and displays them on the recent thoughts page
-     * @return {Promise}
+     * backend API and displays them on the recent thoughts page.
+     * @return {void}
      */
     window.thoughter.retrieveThoughts = function retrieveThoughts() {
       //Fetch request for thoughts
@@ -17,8 +17,7 @@
         if (responseObj.status > 199 && responseObj.status < 300) {
           responseObj.json().then(function printData(data) {
             data.forEach(function logThought(thoughtObj) {
-              let thoughtObjUl = document.querySelector('.recentthoughts-section');
-              thoughtObjUl.appendChild(window.thoughter.buildThoughtListItem(thoughtObj));
+              $('.recentthoughts-section').append(window.thoughter.buildThoughtListItem(thoughtObj));
             });
           });
         }
