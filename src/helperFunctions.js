@@ -2,7 +2,11 @@
   'use strict';
   window.thoughter = window.thoughter || {};
 
-  // comverts UTC datecode into a user readable string
+/**
+ * turns a date string from a thought object into a user readable format
+ * @param  {String} date a UTC date stamp
+ * @return {String}      a date in the style: 'MM/DD/YY at HH:MM'
+ */
   window.thoughter.formattedDate = function formattedDate(date) {
     let formattedDate = '';
     let minutes = date.getMinutes();
@@ -12,7 +16,11 @@
     return formattedDate;
   };
 
-  // creates a thought list item with header and content
+/**
+ * creates a thought list item with header and content
+ * @param  {thoughtObject} thoughtObj an object with a creation time and a content
+ * @return {Object}   an html li element with date time header and thought content
+ */
   window.thoughter.buildThoughtListItem = function buildThoughtListItem(thoughtObj) {
     let thoughtObjLi = $(document.createElement('li'))
       .addClass('recent-thought')
@@ -24,7 +32,11 @@
     return thoughtObjLi;
   };
 
-  // function used with thought creation date and author username to format a header for thought display
+  /**
+   * function used with thought creation date and author username to format a header for thought display
+   * @param  {String} date A date string formatted for user readability: 'MM/DD/YY at HH:MM'
+   * @return {String}      message to insert into a header for a displayed thought object: 'Posted on MM/DD/YY at HH:MM'
+   */
   window.thoughter.formatThoughtHeader = function formatThoughtHeader(date)
     // , username) // commented out until username functionality implemented
     { return 'Posted at ' + window.thoughter.formattedDate(date);
