@@ -30,9 +30,16 @@
       // $('.newthought-main').css('display', 'block');
     };
 
-    $('.newthought-form').on('submit', function newThoughtPoster(e) {
+    /**
+     * Upon the event of sumbission, this
+     * function prevents the user from navigating to a new page.
+     * @param  {Object} e jQuery submit event object
+     * @return {void}
+     */
+    function newThoughtPoster(e) {
       e.preventDefault();
       window.thoughter.postThought($('#newthought-input').val());
-    });
+    }
+    $('.newthought-form').on('submit', newThoughtPoster );
 
 }());
