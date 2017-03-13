@@ -3,7 +3,11 @@
 
     window.thoughter = window.thoughter || {};
 
-    // retrieves a selection of thought objects from backend DB and displays them on recent thoughts page
+    /**
+     * retrieveThoughts retrieves a selection of thought objects from the
+     * backend DB and displays them on the recent thoughts page
+     * @return {Promise}
+     */
     window.thoughter.retrieveThoughts = function retrieveThoughts() {
       //Fetch request for thoughts
       fetch('https://thoughter.herokuapp.com/api/Thoughts?filter={"limit":20, "order":"createTime DESC"}', {
