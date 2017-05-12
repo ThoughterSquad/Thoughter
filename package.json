@@ -1,0 +1,23 @@
+{
+  "name": "thoughter",
+  "version": "1.0.0",
+  "description": "A sample site to develop skill with DOM and AJAX testing, and process automation",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "grunt karma"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThoughterSquad/Thoughter.git"
+  },
+  "author": "Brian Fiala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThoughterSquad/Thoughter/issues"
+  },
+  "homepage": "https://github.com/ThoughterSquad/Thoughter#readme"
+}
